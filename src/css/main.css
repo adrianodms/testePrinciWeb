@@ -2,24 +2,204 @@
   font-family: 'MuseoSans';
   src: url('../fonts/MuseoSans-100.eot');
   src: url('../fonts/MuseoSans-100.woff2') format('woff2'), url('../fonts/MuseoSans-100.woff') format('woff'), url('../fonts/MuseoSans-100.ttf') format('truetype'), url('../fonts/MuseoSans-100.svg#MuseoSans-100') format('svg'), url('../fonts/MuseoSans-100.eot?#iefix') format('embedded-opentype');
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: 'MuseoSans';
   src: url('../fonts/MuseoSans-700.eot');
   src: url('../fonts/MuseoSans-700.woff2') format('woff2'), url('../fonts/MuseoSans-700.woff') format('woff'), url('../fonts/MuseoSans-700.ttf') format('truetype'), url('../fonts/MuseoSans-700.svg#MuseoSans-700') format('svg'), url('../fonts/MuseoSans-700.eot?#iefix') format('embedded-opentype');
-  font-weight: bold;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'MuseoSans';
   src: url('../fonts/MuseoSans-900.eot');
   src: url('../fonts/MuseoSans-900.woff2') format('woff2'), url('../fonts/MuseoSans-900.woff') format('woff'), url('../fonts/MuseoSans-900.ttf') format('truetype'), url('../fonts/MuseoSans-900.svg#MuseoSans-900') format('svg'), url('../fonts/MuseoSans-900.eot?#iefix') format('embedded-opentype');
-  font-weight: bolder;
+  font-weight: 900;
   font-style: normal;
 }
-body,
-h1 {
+/*Structure*/
+html,
+body {
   font-family: 'MuseoSans';
+  font-weight: 100;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  border-top: 6px solid #a9d043;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.833em;
+  line-height: 1;
+}
+p {
+  color: #737474;
+}
+.container-fluid {
+  max-width: 990px;
+}
+input.form-control {
+  border: 1px solid #c9c9c9;
+}
+.btn {
+  padding-top: 8px;
+  padding-bottom: 7px;
+}
+.btn-default {
+  color: #fff;
+  background-color: #922d7b;
+  border-color: #922d7b;
+  text-transform: uppercase;
+}
+.btn-default:hover,
+.btn-default:active,
+.btn-default:active:hover,
+.btn-default:visited:hover {
+  color: #fff;
+  background-color: #008ed4;
+  border-color: #008ed4;
+}
+.btn-default:visited {
+  color: #fff;
+  background-color: #922d7b;
+  border-color: #922d7b;
+  text-transform: uppercase;
+}
+.title {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #922d7b;
+}
+.card {
+  background: #f3f3f3;
+  padding: 20px;
+}
+/* Header */
+.header {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+.logo-wrap {
+  width: 50%;
+  float: left;
+}
+.search {
+  width: 50%;
+  float: right;
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.search .search-input {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: calc(100% - 50px);
+}
+.search .search-btn {
+  line-height: 1.25;
+  font-size: 1rem;
+}
+.navigation {
+  float: right;
+  text-transform: uppercase;
+}
+.navigation > li {
+  display: inline-block;
+}
+.navigation > li + li {
+  margin-left: 40px;
+}
+.navigation a {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 300;
+  color: #737474;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #fff;
+}
+.navigation a.active {
+  color: #922d7b;
+  border-bottom: 3px solid #a9d043;
+}
+.navigation a:hover {
+  color: #922d7b;
+}
+/*Main Content*/
+.slider .slider-item {
+  position: relative;
+  border-bottom: 6px solid #a9d043;
+}
+.slider .slider-content {
+  font-size: 18px;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  width: 40%;
+  z-index: 3;
+}
+.slider .slider-content h1 {
+  margin-top: 0;
+  color: #922d7b;
+  font-size: 2em;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.slider .slider-content h2 {
+  color: #008ed4;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.slider .slider-content p {
+  margin: 18px 0 28px 0;
+  font-size: 0.8em;
+  line-height: 1;
+}
+.news-card {
+  margin-bottom: 10px;
+}
+.news-card h3 {
+  margin-bottom: .5em;
+}
+.news-card h3 a {
+  font-size: 15px;
+  color: #922d7b;
+}
+.news-card p a {
+  font-size: 14px;
+  color: #737474;
+}
+.news-card .new-headline {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+.news-card .new-date {
+  margin: 0;
+  color: #868686;
+  font-style: italic;
 }
