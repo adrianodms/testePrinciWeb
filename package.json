@@ -1,0 +1,25 @@
+{
+  "name": "testeprinciweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianodms/testePrinciWeb.git"
+  },
+  "author": "Adriano Magalhães",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianodms/testePrinciWeb/issues"
+  },
+  "homepage": "https://github.com/adrianodms/testePrinciWeb#readme",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-less": "^3.1.0"
+  }
+}
