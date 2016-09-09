@@ -19,6 +19,7 @@
   font-weight: 900;
   font-style: normal;
 }
+/*Mixins*/
 /*Structure*/
 html,
 body {
@@ -59,8 +60,18 @@ p {
 .container-fluid {
   max-width: 990px;
 }
-input.form-control {
-  border: 1px solid #c9c9c9;
+.form-control {
+  border: 1px solid #d7d7d7;
+  border-radius: 0;
+  -webkit-box-shadow: 2px 3px 0 0 #b3b0b1;
+  -moz-box-shadow: 2px 3px 0 0 #b3b0b1;
+  box-shadow: 2px 3px 0 0 #b3b0b1;
+}
+textarea {
+  resize: none;
+}
+label {
+  font-weight: 300;
 }
 .btn {
   padding-top: 8px;
@@ -87,14 +98,35 @@ input.form-control {
   text-transform: uppercase;
 }
 .title {
-  font-size: 24px;
   font-weight: 900;
   text-transform: uppercase;
   color: #922d7b;
 }
+h2.title {
+  font-size: 24px;
+}
+h3.title {
+  font-size: 16px;
+}
 .card {
   background: #f3f3f3;
   padding: 20px;
+}
+.mini-card-img {
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.mini-card-img.mini-card-img-sm {
+  width: calc(50% - 5px);
+  float: left;
+}
+.mini-card-img.mini-card-img-sm + .mini-card-img-sm {
+  float: right;
 }
 /* Header */
 .header {
@@ -202,4 +234,15 @@ input.form-control {
   margin: 0;
   color: #868686;
   font-style: italic;
+}
+.form-contact {
+  color: #6d6f71;
+  background: #e1e0e0;
+  padding: 14px 0 4px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }

@@ -1,11 +1,25 @@
 @import 'fonts';
 
 @color-primary-font: #737474;
-@color-gray: #c9c9c9;
+@color-gray: #d7d7d7;
+@color-bg-form:#e1e0e0;
 @color-gray-news: #f3f3f3;
 @color-green: #a9d043;
 @color-purple: #922d7b;
 @color-blue: #008ed4;
+
+
+/*Mixins*/
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
 
 /*Structure*/
 
@@ -52,8 +66,20 @@ p{
     max-width:990px;
 }
 
-input.form-control{
+.form-control{       
     border: 1px solid @color-gray;
+    border-radius:0;     
+    -webkit-box-shadow: 2px 3px 0 0 #b3b0b1;
+    -moz-box-shadow:  2px 3px 0 0 #b3b0b1;
+    box-shadow:   2px 3px 0 0 #b3b0b1; 
+}
+
+textarea{
+    resize: none;
+}
+
+label{
+    font-weight: 300;
 }
 
 .btn{
@@ -83,17 +109,37 @@ input.form-control{
     }
 }
 
-.title{
-    font-size: 24px;  
+.title{    
     font-weight: 900;
     text-transform: uppercase;
     color: @color-purple;
+    h2&{
+        font-size: 24px;  
+    }
+    h3&{
+        font-size: 16px;
+    }
 }
 
 .card{
     background: @color-gray-news;
     padding: 20px;
 }
+
+.mini-card-img{
+    width:100%;
+    .border-radius();
+    &.mini-card-img-sm{
+        width:~"calc(50% - 5px)";
+        float:left;
+        &+.mini-card-img-sm{
+            float:right;
+        }
+    }
+
+}
+
+
 
 /* Header */
 
@@ -222,4 +268,12 @@ input.form-control{
         color: #868686;
         font-style: italic;
     }
+}
+
+
+.form-contact{
+    color:#6d6f71;
+    background: @color-bg-form;
+    padding: 14px 0 4px 0;
+    .border-radius();
 }
