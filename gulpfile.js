@@ -28,7 +28,7 @@ gulp.task('serve', ['less'], function() {
 
     gulp.watch("src/css/*.less", ['less']);
     gulp.watch("src/*.html").on('change', browserSync.reload);
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("src/*.js").on('change', browserSync.reload);
 });
 
 

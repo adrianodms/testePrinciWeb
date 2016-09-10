@@ -7,13 +7,16 @@
     <title>PrinciWeb</title>
     <link rel="shortcut icon" href="/img/favicon.png">
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/slick.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <header class="container-fluid header">
         <div class="logo-wrap">
-            <img src="img/logo.png" class="img-responsive" alt="Logotipo da PrinciWeb">
+            <a href="index.html">
+                <img src="img/logo.png" class="img-responsive" alt="Logotipo da PrinciWeb">
+            </a>
         </div>
         <div class="search" id="search">
             <button class="search-btn" id="searchToggle">              
@@ -46,9 +49,9 @@
         </nav>
     </header>
     <main>
-        <section class="slider container-fluid">
+        <section class="slider container-fluid" id="slider">
             <div class="slider-item clearfix">
-                <img src="img/banner_1.jpg" class="img-responsive" alt="Dois homens de perfil com headphone">
+                <img src="img/banner_1.jpg" class="slider-img" alt="Dois homens de perfil com headphone">
                 <div class="slider-content">
                     <h1>
                         Lorem Ipsum
@@ -64,8 +67,8 @@
 
                 </div>
             </div>
-            <!--<div class="slider-item clearfix">
-                <img src="img/banner_2.jpg" class="img-responsive" alt="Dois homens de perfil com headphone">
+            <div class="slider-item clearfix">
+                <img src="img/banner_2.jpg" class="slider-img" alt="Dois homens de perfil com headphone">
                 <div class="slider-content">
                     <h1>
                         Lorem Ipsum
@@ -79,7 +82,7 @@
                     <a href="#" class="btn btn-default">Call to action</a>
 
                 </div>
-            </div>-->
+            </div>
         </section>
 
         <section class="news container-fluid">
@@ -282,8 +285,9 @@
         </div>
     </footer>
 
-    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>    
     <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
